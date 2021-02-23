@@ -6,8 +6,8 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + 'Awesome Nuxt.js',
-    title: 'Awesome Nuxt.js',
+    titleTemplate: 'nuxt.js',
+    title: 'Nuxt.js',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -126,6 +126,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    // extend(config, ctx) {}
   }
 }

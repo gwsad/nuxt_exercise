@@ -43,11 +43,6 @@
 
 <script>
 export default {
-  async fetch() {
-    const { id: postId } = this.$route.params
-    await this.$store.dispatch('blog/fetchPost', postId)
-    this.comments = await this.$axios.$get(`/posts/${postId}/comments`)
-  },
   data: () => ({
     comments: []
   }),

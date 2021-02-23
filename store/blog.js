@@ -1,5 +1,18 @@
 export const state = () => ({
-  posts: [],
+  posts: [
+    {
+      userId: 1,
+      id: 1,
+      title: '第一篇博客',
+      body: '第一个'
+    },
+    {
+      userId: 1,
+      id: 2,
+      title: '第二篇博客',
+      body: '第二个'
+    }
+  ],
   post: null
 })
 
@@ -17,10 +30,6 @@ export const actions = {
     if (state.posts.length > 0) {
       return state.posts
     }
-    return this.$axios.$get('/posts').then((posts) => {
-      commit('SET_POSTS', posts)
-      return posts
-    })
   },
   fetchPost({ commit, getters }, postId) {
     const post = getters.getPostById(postId)

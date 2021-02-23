@@ -22,7 +22,6 @@
       </v-list>
     </v-card>
   </v-skeleton-loader>
-  <p v-else>Error while fetching authors: {{ $fetchState.error.message }}</p>
 </template>
 
 <script>

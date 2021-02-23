@@ -28,13 +28,13 @@
         </NuxtLink>
       </v-toolbar-title>
       <v-spacer />
-      <v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
+      <!-- <v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
         <v-icon>
           {{
             $vuetify.theme.dark ? icons.mdiBrightness4 : icons.mdiBrightness7
           }}
         </v-icon>
-      </v-btn>
+      </v-btn> -->
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn
           v-for="(item, index) in menuItems"
@@ -55,36 +55,6 @@
         <nuxt />
       </v-container>
     </v-content>
-
-    <!--Footer-->
-    <v-footer app fixed>
-      <v-container class="py-0">
-        <v-layout wrap>
-          <v-col cols="2" class="py-0 pl-0 d-flex align-center">
-            <v-btn
-              icon
-              class="mb-0"
-              href="https://github.com/mucahitnezir/awesome-nuxtjs"
-              target="_blank"
-            >
-              <v-icon>{{ icons.mdiGithub }}</v-icon>
-            </v-btn>
-          </v-col>
-          <v-spacer />
-          <v-col cols="8" md="3" class="py-0 pr-0">
-            <v-select
-              :items="locales"
-              :label="localeLabel"
-              hide-details
-              item-text="name"
-              item-value="code"
-              solo
-              @change="onLocaleChange"
-            />
-          </v-col>
-        </v-layout>
-      </v-container>
-    </v-footer>
     <!--// Footer-->
   </v-app>
 </template>
@@ -96,7 +66,7 @@ export default {
   data() {
     return {
       drawer: false,
-      title: 'Awesome Nuxt.js',
+      title: 'nuxt.js 练习',
       icons: { mdiBrightness4, mdiBrightness7, mdiGithub }
     }
   },
@@ -113,11 +83,11 @@ export default {
     menuItems() {
       return [
         {
-          text: this.$t('menuItems.authors'),
+          text: this.$t('作者'),
           to: this.localePath('/authors')
         },
         {
-          text: this.$t('menuItems.blog'),
+          text: this.$t('博客'),
           to: this.localePath('/blog')
         }
       ]

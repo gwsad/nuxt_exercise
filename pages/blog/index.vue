@@ -4,7 +4,7 @@
     :loading="$fetchState.pending"
     type="card-heading,list-item@100"
   >
-    <PostListCard :posts="posts" :title="$t('blog.posts')" />
+    <PostListCard :posts="posts" :title="$t('博客')" />
   </v-skeleton-loader>
   <p v-else>Error while fetching posts: {{ $fetchState.error.message }}</p>
 </template>

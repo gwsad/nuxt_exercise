@@ -1,7 +1,7 @@
 <template>
   <v-card color="primary" dark>
     <v-card-title class="headline">
-      {{ $t('welcome') }}
+      {{ $t('aaaaa') }}
     </v-card-title>
   </v-card>
 </template>
