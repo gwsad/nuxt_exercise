@@ -1,6 +1,3 @@
-# Awesome Nuxt.js Project
-
-> My top-notch Nuxt.js project
 
 ## Build Setup
 
